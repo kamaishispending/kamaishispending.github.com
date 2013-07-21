@@ -1,6 +1,6 @@
-# 俺のゼニはどこ行った for 小金井
+# 俺のゼニはどこ行った for 釜石
 
-wheredoesmymoney.orgの東京都小金井市バージョンです．
+wheredoesmymoney.orgの岩手県釜石市バージョンです．
 
 横浜バージョンから派生しました。
 

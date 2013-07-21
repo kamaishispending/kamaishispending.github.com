@@ -10,7 +10,7 @@ Taxes.taxRate = 0.06; // 住民税率
 
 var OpenSpending = OpenSpending || {};
 
-OpenSpending.identifier = 'jptokyokoganeibudget';
+OpenSpending.identifier = 'kamaishibudget';
 OpenSpending.year = '2013';
 
 OpenSpending.Styles = OpenSpending.Styles || {};
@@ -37,31 +37,39 @@ OpenSpending.Styles.Cofog = {
   '402': { icon: 'icons/medical-supplies.svg', color: '#C75746', bcolor: '#D33673' }, // 衛生費 清掃費
   '5': { icon: 'icons/environment.svg', color: '#C75746', bcolor: '#2A3A03' }, // 労働費
   '501': { icon: 'icons/tree.svg', color: '#C75746', bcolor: '#2A3A03' }, //　労働費 労働諸費
-  '6': { icon: 'icons/civilian-action.svg', color: '#C75746', bcolor: '#EC2406' }, // 農林水産費
-  '601': { icon: 'icons/civilian-action.svg', color: '#C75746', bcolor: '#EC2406' }, // 農林水産費 農業費
+  '6': { icon: 'icons/sangyou3.svg', color: '#C75746', bcolor: '#EC2406' }, // 農林水産費
+  '601': { icon: 'icons/c_nougyou.svg', color: '#C75746', bcolor: '#EC2406' }, // 農林水産費 農業費
+  '602': { icon: 'icons/forest.svg', color: '#C75746', bcolor : '#EC2406' }, // 農林水産費 林業費
+  '603': { icon: 'icons/fishing.svg', color: '#C75746', bcolor : '#EC2406' }, // 農林水産費 水産業費
   '7': { icon: 'icons/traffic-watersup.svg', color: '#C75746', bcolor: '#938626' }, // 商工費
   '701': { icon: 'icons/traffic-watersup.svg', color: '#C75746', bcolor: '#938626' }, // 商工費 商工費
   '8': { icon: 'icons/coal.svg', color: '#C75746', bcolor: '#C75746' }, // 土木費
   '801': { icon: 'icons/publicaffairs.svg', color: '#C75746', bcolor: '#C75746' }, // 土木費 土木管理費
   '802': { icon: 'icons/farms.svg', color: '#C75746', bcolor: '#C75746' }, // 土木費 道路橋りょう費
   '803': { icon: 'icons/government.svg', color: '#C75746', bcolor: '#C75746' }, // 土木費 河川費
-  '804': { icon: 'icons/government-uk.svg', color: '#C75746', bcolor: '#C75746' }, // 土木費 都市計画費
-  '805': { icon: 'icons/housing.svg', color: '#C75746', bcolor: '#C75746' }, // 土木費 住宅費
+  '804': { icon: 'icons/anchor.svg', color: '#C75746', bcolor: '#C75746' }, // 土木費 港湾費
+  '805': { icon: 'icons/government-uk.svg', color: '#C75746', bcolor: '#C75746' }, // 土木費 都市計画費
+  '806': { icon: 'icons/housing.svg', color: '#C75746', bcolor: '#C75746' }, // 土木費 住宅費
   '9': { icon: 'icons/order-safety.svg', color: '#C75746', bcolor: '#D33673' }, // 消防費
   '901': { icon: 'icons/order-safety.svg', color: '#C75746', bcolor: '#D33673' }, // 消防費 消防費
   '10': { icon: 'icons/schools.svg', color: '#C75746', bcolor: '#790586' }, // 教育費
   '1001': { icon: 'icons/education.svg', color: '#C75746', bcolor: '#790586' }, // 教育費 教育総労務費
   '1002': { icon: 'icons/pre-school.svg', color: '#C75746', bcolor: '#790586' },  // 教育費 小学校費
   '1003': { icon: 'icons/primary.svg', color: '#C75746', bcolor: '#790586' }, // 教育費 中学校費
-  '1004': { icon: 'icons/books.svg', color: '#C75746', bcolor: '#790586' }, // 教育費 社会教育費
-  '1005': { icon: 'icons/sports.svg', color: '#C75746', bcolor: '#790586' }, // 教育費 保健体育費
-  '11': { icon: 'icons/order-safety.svg', color: '#C75746', bcolor: '#D36B3B' }, // 公債費
-  '1101': { icon: 'icons/order-safety.svg', color: '#C75746', bcolor: '#D36B3B' }, // 公債費
-  '12': { icon: 'icons/order-safety.svg', color: '#C75746', bcolor: '#935B3B' }, // 諸支出金
-  '1201': { icon: 'icons/farms.svg', color: '#C75746', bcolor: '#935B3B' }, // 諸支出金 土地基金費
-  '1202': { icon: 'icons/petrol.svg', color: '#C75746', bcolor: '#935B3B' }, // 諸支出金 開発公社費
-  '13': { icon: 'icons/admin.svg', color: '#C75746', bcolor: '#C35B4B' }, // 予備費
-  '1301': { icon: 'icons/admin.svg', color: '#C75746', bcolor: '#C35B4B' }  // 予備費 予備費
+  '1004': { icon: 'icons/c_sankaku_ikusei.svg', color: '#C75746', bcolor: '#790586' }, // 教育費 幼稚園費
+  '1005': { icon: 'icons/books.svg', color: '#C75746', bcolor: '#790586' }, // 教育費 社会教育費
+  '1006': { icon: 'icons/sports.svg', color: '#C75746', bcolor: '#790586' }, // 教育費 保健体育費
+  '11': { icon: 'icons/aid-developing-countries.svg', color: '#C75746', bcolor: '#D36B3B' }, // 災害復旧費
+  '1101': { icon: 'icons/order-safety.svg', color: '#C75746', bcolor: '#D36B3B' }, // 災害復旧費 農林水産施設災害復旧費
+  '1102': { icon: 'icons/order-safety.svg', color: '#C75746', bcolor: '#D36B3B' }, // 災害復旧費 公共土木施設災害復旧費
+  '1103': { icon: 'icons/order-safety.svg', color: '#C75746', bcolor: '#D36B3B' }, // 災害復旧費 文教施設災害復旧費
+  '1104': { icon: 'icons/order-safety.svg', color: '#C75746', bcolor: '#D36B3B' }, // 災害復旧費 その他公共施設公用施設災害復旧費
+  '12': { icon: 'icons/economic-aid.svg', color: '#C75746', bcolor: '#D36B3B' }, // 公債費
+  '1201': { icon: 'icons/economic-aid.svg', color: '#C75746', bcolor: '#D36B3B' }, // 公債費
+  '13': { icon: 'icons/farms.svg', color: '#C75746', bcolor: '#935B3B' }, // 諸支出金
+  '1301': { icon: 'icons/farms.svg', color: '#C75746', bcolor: '#935B3B' }, // 諸支出金 災害援護費
+  '14': { icon: 'icons/admin.svg', color: '#C75746', bcolor: '#C35B4B' }, // 予備費
+  '1401': { icon: 'icons/admin.svg', color: '#C75746', bcolor: '#C35B4B' }  // 予備費 予備費
 };
 
 
